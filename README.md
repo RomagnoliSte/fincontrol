@@ -45,6 +45,10 @@ A aplicação permite cadastrar transações, visualizar saldo, filtrar moviment
 
 ### Testes automatizados com Vitest e jest-dom
 
+```bash
+npm run test
+```
+
 ## Layout da página
 
 <img width="1270" height="868" alt="image" src="https://github.com/user-attachments/assets/5dbde08f-7418-42e6-9fb5-ff9a410f088b" />
