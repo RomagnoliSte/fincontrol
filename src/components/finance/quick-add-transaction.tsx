@@ -156,8 +156,19 @@ export function QuickAddTransaction({
             value={amount}
             hasError={!!errors.amount}
             onChange={(event) => {
-              const value = event.target.value.replace(/[^\d,.-]/g, "");
+              const value = event.target.value.replace(/[^\d,.-]/g, ""); // limpa caracteres inválidos
               setAmount(value);
+            }}
+            onBlur={() => {
+              if (!amount) return;
+
+              const normalized = amount.replace(",", ".");
+              const number = Number(normalized);
+
+              if (!Number.isNaN(number)) {
+                const formatted = number.toFixed(2).replace(".", ",");
+                setAmount(formatted);
+              }
             }}
           />
           {errors.amount && (
