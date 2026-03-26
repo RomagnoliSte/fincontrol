@@ -1,4 +1,4 @@
-#FinControl
+# FinControl
 Aplicação de controle financeiro pessoal construída com Vite, React e TypeScript, com foco em fundamentos sólidos, boa experiência de uso e interface limpa.
 
 ## Problema
