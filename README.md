@@ -1,73 +1,44 @@
-# React + TypeScript + Vite
+#FinControl
+Aplicação de controle financeiro pessoal construída com Vite, React e TypeScript, com foco em fundamentos sólidos, boa experiência de uso e interface limpa.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Problema
+Muitas pessoas não acompanham suas entradas e saídas com clareza no dia a dia. O FinControl foi pensado para tornar esse controle simples, visual e rápido.
 
-Currently, two official plugins are available:
+## Solução
+A aplicação permite cadastrar transações, visualizar saldo, filtrar movimentações por Tipo, Descrição e Categoria, além de persistir os dados localmente no navegador.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Funcionalidades
+- Cadastro de entradas e saídas
+- Resumo com entradas, saídas e saldo
+- Filtro por descrição
+- Filtro por tipo
+- Filtro por categoria
+- Exclusão de entradas e saídas
+- Persistência com localStorage
+- Feedback visual com toast
+- Dark mode
 
-## React Compiler
+## Tecnologias
+- React
+- TypeScript
+- Vite
+- tailwindcss
+- next-themes
+- sonner
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Decisões de UX
+- Interface limpa e com boa hierarquia visual
+- Formulário com validação e labels claros
+- Destaque visual para entradas e saídas
+- Feedback imediato após ações importantes
 
-## Expanding the ESLint configuration
+## Melhorias futuras
+- Edição de transações
+- Confirmação para exclusão
+- Exportação CSV
+- Testes automatizados
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Como rodar o projeto
+```bash
+npm install
+npm run dev
