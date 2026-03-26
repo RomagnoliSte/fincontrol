@@ -144,8 +144,14 @@ export function TransactionFormModal({
         </div>
 
         <div>
-          <label className="mb-2 block text-sm font-medium">Descrição</label>
+          <label
+            htmlFor="edit-transaction-title"
+            className="mb-2 block text-sm font-medium"
+          >
+            Descrição
+          </label>
           <Input
+            id="edit-transaction-title"
             value={title}
             hasError={!!errors.title}
             onChange={(event) => setTitle(event.target.value)}
@@ -156,8 +162,14 @@ export function TransactionFormModal({
         </div>
 
         <div>
-          <label className="mb-2 block text-sm font-medium">Valor (R$)</label>
+          <label
+            htmlFor="edit-transaction-amount"
+            className="mb-2 block text-sm font-medium"
+          >
+            Valor (R$)
+          </label>
           <Input
+            id="edit-transaction-amount"
             inputMode="decimal"
             value={amount}
             hasError={!!errors.amount}
@@ -179,8 +191,14 @@ export function TransactionFormModal({
         </div>
 
         <div>
-          <label className="mb-2 block text-sm font-medium">Categoria</label>
+          <label
+            htmlFor="edit-transaction-category"
+            className="mb-2 block text-sm font-medium"
+          >
+            Categoria
+          </label>
           <Select
+            id="edit-transaction-category"
             value={category}
             onChange={(event) =>
               setCategory(event.target.value as TransactionCategory)

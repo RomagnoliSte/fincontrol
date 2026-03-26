@@ -136,8 +136,14 @@ export function QuickAddTransaction({
         </div>
 
         <div>
-          <label className="mb-2 block text-sm font-medium">Descrição</label>
+          <label
+            htmlFor="transaction-title"
+            className="mb-2 block text-sm font-medium"
+          >
+            Descrição
+          </label>
           <Input
+            id="transaction-title"
             placeholder="Ex: Compras no supermercado"
             value={title}
             hasError={!!errors.title}
@@ -149,8 +155,14 @@ export function QuickAddTransaction({
         </div>
 
         <div>
-          <label className="mb-2 block text-sm font-medium">Valor (R$)</label>
+          <label
+            htmlFor="transaction-amount"
+            className="mb-2 block text-sm font-medium"
+          >
+            Valor (R$)
+          </label>
           <Input
+            id="transaction-amount"
             inputMode="decimal"
             placeholder="0,00"
             value={amount}
@@ -177,8 +189,14 @@ export function QuickAddTransaction({
         </div>
 
         <div>
-          <label className="mb-2 block text-sm font-medium">Categoria</label>
+          <label
+            htmlFor="transaction-category"
+            className="mb-2 block text-sm font-medium"
+          >
+            Categoria
+          </label>
           <Select
+            id="transaction-category"
             value={category}
             onChange={(event) =>
               setCategory(event.target.value as TransactionCategory)

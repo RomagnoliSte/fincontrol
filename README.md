@@ -24,6 +24,7 @@ A aplicação permite cadastrar transações, visualizar saldo, filtrar moviment
 - Edição de transações
 - Confirmação para exclusão
 - Resumo por categoria de gastos
+- Exportação CSV
 
 ## Tecnologias
 
@@ -42,10 +43,7 @@ A aplicação permite cadastrar transações, visualizar saldo, filtrar moviment
 - Feedback imediato após ações importantes
 - Confirmação antes de excluir transações
 
-## Melhorias futuras
-
-- Exportação CSV
-- Testes automatizados
+### Testes automatizados com Vitest e jest-dom
 
 ## Layout da página
 
