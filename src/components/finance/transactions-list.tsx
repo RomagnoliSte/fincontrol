@@ -6,7 +6,8 @@ import { TransactionsToolbar } from "./transactions-toolbar";
 
 type TransactionsListProps = {
   transactions: Transaction[];
-  onDeleteTransaction: (id: string) => void;
+  onEditTransaction: (transaction: Transaction) => void;
+  onDeleteTransaction: (transaction: Transaction) => void;
   search: string;
   onSearchChange: (value: string) => void;
   filter: TransactionFilter;
@@ -15,6 +16,7 @@ type TransactionsListProps = {
 
 export function TransactionsList({
   transactions,
+  onEditTransaction,
   onDeleteTransaction,
   search,
   onSearchChange,
@@ -51,6 +53,7 @@ export function TransactionsList({
             <TransactionItem
               key={transaction.id}
               transaction={transaction}
+              onEdit={onEditTransaction}
               onDelete={onDeleteTransaction}
             />
           ))}

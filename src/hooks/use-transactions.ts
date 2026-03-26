@@ -86,6 +86,22 @@ export function useTransactions() {
     setTransactions((prev) => [newTransaction, ...prev]);
   }
 
+  function updateTransaction(id: string, data: NewTransactionInput) {
+    setTransactions((prev) =>
+      prev.map((transaction) =>
+        transaction.id === id
+          ? {
+              ...transaction,
+              title: data.title,
+              category: data.category,
+              amount: data.amount,
+              type: data.type,
+            }
+          : transaction,
+      ),
+    );
+  }
+
   function removeTransaction(id: string) {
     setTransactions((prev) =>
       prev.filter((transaction) => transaction.id !== id),
@@ -128,6 +144,7 @@ export function useTransactions() {
     transactions,
     filteredTransactions,
     addTransaction,
+    updateTransaction,
     removeTransaction,
     totalIncome,
     totalExpenses,
