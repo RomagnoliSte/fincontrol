@@ -1,11 +1,13 @@
 import { Card } from "../ui/card";
 import { EmptyState } from "../ui/empty-state";
 import type { Transaction, TransactionFilter } from "../../types/transaction";
+import { ExportTransactionsButton } from "./export-transactions-button";
 import { TransactionItem } from "./transaction-item";
 import { TransactionsToolbar } from "./transactions-toolbar";
 
 type TransactionsListProps = {
   transactions: Transaction[];
+  allTransactions: Transaction[];
   onEditTransaction: (transaction: Transaction) => void;
   onDeleteTransaction: (transaction: Transaction) => void;
   search: string;
@@ -16,6 +18,7 @@ type TransactionsListProps = {
 
 export function TransactionsList({
   transactions,
+  allTransactions,
   onEditTransaction,
   onDeleteTransaction,
   search,
@@ -26,13 +29,16 @@ export function TransactionsList({
   return (
     <Card className="rounded-[28px] p-6">
       <div className="mb-6 flex items-center justify-between gap-4">
-        <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
-          Transações Recentes
-        </h2>
+        <div>
+          <h2 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
+            Transações Recentes
+          </h2>
+          <span className="text-sm text-zinc-500 dark:text-zinc-400">
+            {transactions.length} item(ns)
+          </span>
+        </div>
 
-        <span className="text-sm text-zinc-500 dark:text-zinc-400">
-          {transactions.length} item(ns)
-        </span>
+        <ExportTransactionsButton transactions={allTransactions} />
       </div>
 
       <TransactionsToolbar

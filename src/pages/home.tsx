@@ -61,6 +61,7 @@ export function HomePage() {
           <div className="lg:col-span-2">
             <TransactionsList
               transactions={filteredTransactions}
+              allTransactions={transactions}
               onEditTransaction={setEditingTransaction}
               onDeleteTransaction={setDeletingTransaction}
               search={search}

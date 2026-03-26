@@ -21,6 +21,9 @@ A aplicação permite cadastrar transações, visualizar saldo, filtrar moviment
 - Persistência com localStorage
 - Feedback visual com toast
 - Dark mode
+- Edição de transações
+- Confirmação para exclusão
+- Resumo por categoria de gastos
 
 ## Tecnologias
 
@@ -37,11 +40,10 @@ A aplicação permite cadastrar transações, visualizar saldo, filtrar moviment
 - Formulário com validação e labels claros
 - Destaque visual para entradas e saídas
 - Feedback imediato após ações importantes
+- Confirmação antes de excluir transações
 
 ## Melhorias futuras
 
-- Edição de transações
-- Confirmação para exclusão
 - Exportação CSV
 - Testes automatizados
 
